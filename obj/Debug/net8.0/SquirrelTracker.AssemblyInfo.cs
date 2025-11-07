@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SquirrelTracker")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+517d3e91e69f3d52998594694a0d7945aa5fd7de")]
 [assembly: System.Reflection.AssemblyProductAttribute("SquirrelTracker")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SquirrelTracker")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

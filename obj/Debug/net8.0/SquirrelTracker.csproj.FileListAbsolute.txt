@@ -169,3 +169,4 @@ C:\Users\Josiah\source\repos\SquirrelTracker\obj\Debug\net8.0\refint\SquirrelTra
 C:\Users\Josiah\source\repos\SquirrelTracker\obj\Debug\net8.0\SquirrelTracker.pdb
 C:\Users\Josiah\source\repos\SquirrelTracker\obj\Debug\net8.0\SquirrelTracker.genruntimeconfig.cache
 C:\Users\Josiah\source\repos\SquirrelTracker\obj\Debug\net8.0\ref\SquirrelTracker.dll
+C:\Users\Josiah\source\repos\SquirrelTracker\obj\Debug\net8.0\SquirrelTracker.sourcelink.json
