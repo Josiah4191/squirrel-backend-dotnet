@@ -1,0 +1,29 @@
+﻿<!-- Josiah Stoltzfus, 11/03/2025, Squirrel Tracker -->
+@using SquirrelTracker.Models.Stashes.Dto
+@model StashCreateDto
+
+@{
+    ViewData["Title"] = "Add Stash";
+}
+
+<!-- Main container for the page -->
+<div class="container mt-4">
+
+    <!-- Page heading -->
+    <h1>Add Stash</h1>
+
+    <!-- Form to add a new stash for a squirrel -->
+    <form method="post" asp-area="Admin" asp-controller="Stash" asp-action="Create" asp-route-id="@ViewBag.SquirrelId">
+
+        <!-- Field to enter where the stash is located -->
+        <div class="mb-3">
+            <label for="Location" class="form-label">Location</label>
+            <input asp-for="Location" class="form-control" />
+            <span asp-validation-for="Location" class="text-danger"></span>
+        </div>
+
+        <!-- Buttons to create the stash or go back -->
+        <button type="submit" class="btn btn-primary">Create</button>
+        <a class="btn btn-secondary" asp-area="" asp-controller="Squirrel" asp-action="Stashes" asp-route-id="@ViewBag.SquirrelId">Back</a>
+    </form>
+</div>

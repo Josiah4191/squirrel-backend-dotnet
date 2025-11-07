@@ -1,0 +1,83 @@
+﻿<!-- Josiah Stoltzfus, 11/03/2025, Squirrel Tracker -->
+@using SquirrelTracker.Models.StashLines.Dto
+@model List<StashLineDto>
+
+@{
+    ViewData["Title"] = "Items";
+}
+
+<!-- Main container for displaying all items in a stash -->
+<div class="container mt-4">
+
+    <!-- Page heading -->
+    <div class="d-flex justify-content-between mb-3">
+        <h1>Items</h1>
+    </div>
+
+    <!-- Table showing each item, its description, and quantity -->
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <!-- Item name -->
+                    <td>@item.Item.Name</td>
+
+                    <!-- Item description -->
+                    <td>@item.Item.Description</td>
+
+                    <!-- Item quantity -->
+                    <td>@item.Quantity</td>
+
+                    <!-- Buttons to edit or remove the item -->
+                    <td class="text-end d-flex gap-2 justify-content-end">
+
+                        <!-- Edit item button -->
+                        <a class="btn btn-sm btn-outline-secondary"
+                           asp-area="Admin"
+                           asp-controller="Stash"
+                           asp-action="EditItem"
+                           asp-route-stashId="@ViewBag.StashId"
+                           asp-route-itemId="@item.Item.Id">
+                            Edit
+                        </a>
+
+                        <!-- Remove item button -->
+                        <form method="post" 
+                            asp-area="Admin" 
+                            asp-controller="Stash"
+                            asp-action="DeleteItem"
+                            asp-route-stashId="@ViewBag.StashId" 
+                            asp-route-itemId="@item.Item.Id">
+                            <button class="btn btn-sm btn-outline-danger">Remove</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <!-- Buttons to add a new item or return to stash list -->
+    <a class="btn btn-primary"
+       asp-area="Admin"
+       asp-controller="Stash"
+       asp-action="AddItem"
+       asp-route-id="@ViewBag.StashId">
+        Add Item
+    </a>
+
+    <a class="btn btn-secondary"
+       asp-area=""
+       asp-controller="Squirrel"
+       asp-action="Stashes"
+       asp-route-id="@ViewBag.SquirrelId">
+        Back to Stashes
+    </a>
+</div>

@@ -1,0 +1,35 @@
+﻿<!-- Josiah Stoltzfus, 11/03/2025, Squirrel Tracker -->
+@using SquirrelTracker.Models.StashLines.Dto
+@model StashLineDto
+
+<!-- Main container for editing an item in a stash -->
+<div class="container mt-4">
+
+    <!-- Page heading -->
+    <h1>Edit Item</h1>
+
+    <!-- Form to update the quantity of an existing item -->
+    <form method="post" 
+        asp-area="Admin" 
+        asp-controller="Stash" 
+        asp-action="EditItem" 
+        asp-route-stashId="@ViewBag.stashId" 
+        asp-route-itemId="@Model.Item.Id">
+
+        <!-- Display the item name (not editable) -->
+        <div class="mb-3">
+            <label class="form-label">Item Name</label>
+            <input type="text" class="form-control" value="@Model.Item.Name" readonly />
+        </div>
+
+        <!-- Field to change the item quantity -->
+        <div class="mb-3">
+            <label for="Quantity" class="form-label">Quantity</label>
+            <input type="number" class="form-control" id="Quantity" name="Quantity" value="@Model.Quantity" min="1" required />
+        </div>
+
+        <!-- Buttons to save changes or go back -->
+        <button type="submit" class="btn btn-primary">Save</button>
+        <a class="btn btn-secondary" asp-area="" asp-controller="Stash" asp-action="Items" asp-route-id="@ViewBag.stashId">Cancel</a>
+    </form>
+</div>

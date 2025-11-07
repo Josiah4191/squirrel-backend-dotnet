@@ -1,0 +1,33 @@
+﻿<!-- Josiah Stoltzfus, 11/03/2025, Squirrel Tracker -->
+@using SquirrelTracker.Models.Squirrels.Dto
+@model SquirrelCreateDto
+
+@{
+    ViewData["Title"] = "Add Squirrel";
+}
+
+<!-- Main container for the page -->
+<div class="container mt-4">
+
+    <!-- Page heading -->
+    <h1>Add Squirrel</h1>
+
+    <!-- Form to add a new squirrel -->
+    <form method="post" asp-area="Admin" asp-controller="Squirrel" asp-action="Create">
+
+        <!-- Field for the squirrel's name -->
+        <div class="container mt-4">
+            <div class="mb-3">
+                <label asp-for="Name" class="form-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <!-- Buttons to submit or go back -->
+            <button type="submit" class="btn btn-primary">Create</button>
+            <a class="btn btn-secondary" asp-area="" asp-controller="Squirrel" asp-action="Index">Back</a>
+
+        </div>
+    </form>
+</div>
+

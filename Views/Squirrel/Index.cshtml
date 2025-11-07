@@ -1,0 +1,62 @@
+﻿<!-- Josiah Stoltzfus, 11/03/2025, Squirrel Tracker -->
+@using SquirrelTracker.Models.Squirrels.Dto
+@model List<SquirrelDto>
+
+@{
+    ViewData["Title"] = "Squirrels";
+}
+
+<!-- Main container for the squirrel list -->
+<div class="container mt-4">
+
+    <!-- Page heading -->
+    <div class="d-flex justify-content-between mb-3">
+        <h1>Squirrels</h1>
+    </div>
+
+    <!-- Table showing all squirrels -->
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (SquirrelDto squirrel in Model)
+            {
+                <tr>
+                    <!-- Display squirrel name -->
+                    <td>@squirrel.Name</td>
+
+                    <!-- Action buttons for each squirrel -->
+                    <td class="text-end d-flex gap-2 justify-content-end">
+
+                        <!-- Button to view this squirrel's stashes -->
+                        <a class="btn btn-sm btn-outline-primary"
+                           asp-area=""
+                           asp-controller="Squirrel"
+                           asp-action="Stashes"
+                           asp-route-id="@squirrel.Id">View Stashes</a>
+
+                        <!-- Button to edit this squirrel -->
+                        <a class="btn btn-sm btn-outline-secondary"
+                           asp-area="Admin"
+                           asp-controller="Squirrel"
+                           asp-action="Edit"
+                           asp-route-id="@squirrel.Id">Edit</a>
+
+                        <!-- Button to remove this squirrel -->
+                        <form method="post" asp-area="Admin" asp-controller="Squirrel" asp-action="Delete" asp-route-id="@squirrel.Id">
+                            <button class="btn btn-sm btn-outline-danger">Remove</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <!-- Buttons to add a new squirrel or return home -->
+    <a class="btn btn-primary" asp-area="Admin" asp-controller="Squirrel" asp-action="Create">Add Squirrel</a>
+    <a class="btn btn-secondary" asp-area="" asp-controller="Home" asp-action="Index">Back</a>
+</div>
