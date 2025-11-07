@@ -15,6 +15,7 @@ A simple ASP.NET Core MVC app that uses SQL Server to manage several related thi
 
 - C#
 - .NET 8 (ASP.NET Core MVC)
+- Razor Pages / Views
 - Entity Framework Core
 - SQL Server
 - Bootstrap
