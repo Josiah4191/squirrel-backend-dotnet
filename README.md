@@ -22,4 +22,4 @@ A simple ASP.NET Core MVC app that uses SQL Server to manage several related thi
 
 - Work in progress
 - Built for educational use and practice
-
+- Screenshots available in the Screenshots folder
