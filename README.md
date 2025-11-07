@@ -2,8 +2,6 @@
 
 A simple ASP.NET Core MVC app that uses SQL Server to manage several related things (like squirrels, items, and stashes) with a real database behind it.
 
----
-
 ## Overview
 
 - MVC web app for managing squirrels, items, stashes, and stash lines
