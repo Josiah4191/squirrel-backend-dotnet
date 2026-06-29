@@ -1,25 +1,19 @@
-# Squirrel Tracker
+# Squirrel Stash (Archived)
 
-A simple ASP.NET Core MVC app that uses SQL Server to manage several related things (like squirrels, items, and stashes) with a real database behind it.
+A desktop application built with C#, WPF, and MVVM to learn desktop application development and object-oriented programming.
 
-## Overview
+The project allows users to manage squirrels and the items stored in their stashes through a Windows desktop interface.
 
-- MVC web app for managing squirrels, items, stashes, and stash lines
-- Database integration with Entity Framework Core
-- CRUD views and controllers for all entities
-- Navigation between related data (e.g., a squirrel's stashes)
-
-## Tools
+## Technologies
 
 - C#
-- .NET 8 (ASP.NET Core MVC)
-- Razor Pages / Views
-- Entity Framework Core
-- SQL Server
-- Bootstrap
+- .NET
+- WPF
+- MVVM
+- XAML
 
-## Notes
+---
 
-- Work in progress
-- Built for educational use and practice
-- Screenshots available in the Screenshots folder
+**Status:** Archived
+
+This project is no longer maintained and is preserved as an archive of an earlier learning project.
