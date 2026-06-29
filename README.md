@@ -1,6 +1,6 @@
 # Squirrel Stash (Archived)
 
-A desktop application built with C#, .NET and SQL Server o learn desktop application development and object-oriented programming.
+A desktop application built with C#, .NET and SQL Server to learn desktop application development and object-oriented programming.
 
 The project allows users to manage squirrels and the items stored in their stashes through a Windows desktop interface.
 
