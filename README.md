@@ -1,4 +1,4 @@
-# Squirrel Stash
+# Squirrel C#
 
 An ASP.NET MVC application built to explore object-oriented programming, web application development, and relational databases.
 
